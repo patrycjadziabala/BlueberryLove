@@ -13,7 +13,7 @@ struct MainView: View {
             Image(Constants.backgroundImage)
                 .resizable()
                 .scaledToFit()
-                .ignoresSafeArea()
+                .edgesIgnoringSafeArea(.top)
             ScrollView {
                 VStack {
                     HeaderView()
@@ -24,7 +24,7 @@ struct MainView: View {
                         ReceipeCardView(receipe: receipe)
                             .padding()
                     }
-                    Spacer()
+                    InfoView()
                 } //vstack
             } //scrollView
             .edgesIgnoringSafeArea(.top)

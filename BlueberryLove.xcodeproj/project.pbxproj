@@ -16,6 +16,10 @@
 		46A6D6B32A2CCD3E00572121 /* ReceipeModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6D6B22A2CCD3E00572121 /* ReceipeModel.swift */; };
 		46A6D6B52A2CCE6700572121 /* ReceipesData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6D6B42A2CCE6700572121 /* ReceipesData.swift */; };
 		46A6D6B72A2CD07700572121 /* ReceipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6D6B62A2CD07700572121 /* ReceipeCardView.swift */; };
+		46A6D6B92A2CD99600572121 /* ReceipeDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6D6B82A2CD99600572121 /* ReceipeDetailsView.swift */; };
+		46A6D6BB2A2CDAAA00572121 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6D6BA2A2CDAAA00572121 /* RatingView.swift */; };
+		46A6D6BD2A2CDB3600572121 /* ReceipeInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6D6BC2A2CDB3600572121 /* ReceipeInfoView.swift */; };
+		46A6D6BF2A2CE20C00572121 /* InfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46A6D6BE2A2CE20C00572121 /* InfoView.swift */; };
 		46F8DEAF2A2C9579005183CE /* BlueberryLoveApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8DEAE2A2C9579005183CE /* BlueberryLoveApp.swift */; };
 		46F8DEB12A2C9579005183CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8DEB02A2C9579005183CE /* ContentView.swift */; };
 		46F8DEB32A2C957A005183CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEB22A2C957A005183CE /* Assets.xcassets */; };
@@ -37,6 +41,10 @@
 		46A6D6B22A2CCD3E00572121 /* ReceipeModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeModel.swift; sourceTree = "<group>"; };
 		46A6D6B42A2CCE6700572121 /* ReceipesData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipesData.swift; sourceTree = "<group>"; };
 		46A6D6B62A2CD07700572121 /* ReceipeCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeCardView.swift; sourceTree = "<group>"; };
+		46A6D6B82A2CD99600572121 /* ReceipeDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeDetailsView.swift; sourceTree = "<group>"; };
+		46A6D6BA2A2CDAAA00572121 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		46A6D6BC2A2CDB3600572121 /* ReceipeInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReceipeInfoView.swift; sourceTree = "<group>"; };
+		46A6D6BE2A2CE20C00572121 /* InfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoView.swift; sourceTree = "<group>"; };
 		46F8DEAB2A2C9579005183CE /* BlueberryLove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BlueberryLove.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		46F8DEAE2A2C9579005183CE /* BlueberryLoveApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlueberryLoveApp.swift; sourceTree = "<group>"; };
 		46F8DEB02A2C9579005183CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -141,6 +149,10 @@
 				46A6D6AB2A2CBA6B00572121 /* HeaderView.swift */,
 				46A6D6AD2A2CC6F000572121 /* FactsTabView.swift */,
 				46A6D6B62A2CD07700572121 /* ReceipeCardView.swift */,
+				46A6D6B82A2CD99600572121 /* ReceipeDetailsView.swift */,
+				46A6D6BA2A2CDAAA00572121 /* RatingView.swift */,
+				46A6D6BC2A2CDB3600572121 /* ReceipeInfoView.swift */,
+				46A6D6BE2A2CE20C00572121 /* InfoView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -231,15 +243,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				46F8DEB12A2C9579005183CE /* ContentView.swift in Sources */,
+				46A6D6B92A2CD99600572121 /* ReceipeDetailsView.swift in Sources */,
 				46A6D6AE2A2CC6F000572121 /* FactsTabView.swift in Sources */,
 				46F8DECB2A2CA89C005183CE /* EnterButtonView.swift in Sources */,
 				46F8DEAF2A2C9579005183CE /* BlueberryLoveApp.swift in Sources */,
 				46F8DECD2A2CAD43005183CE /* TitleView.swift in Sources */,
+				46A6D6BF2A2CE20C00572121 /* InfoView.swift in Sources */,
 				46A6D6A52A2CB15600572121 /* NutritionData.swift in Sources */,
 				46A6D6AC2A2CBA6B00572121 /* HeaderView.swift in Sources */,
 				46F8DEC22A2C992D005183CE /* EntryView.swift in Sources */,
 				46A6D6B72A2CD07700572121 /* ReceipeCardView.swift in Sources */,
 				46A6D6AA2A2CB22800572121 /* NutritionView.swift in Sources */,
+				46A6D6BB2A2CDAAA00572121 /* RatingView.swift in Sources */,
+				46A6D6BD2A2CDB3600572121 /* ReceipeInfoView.swift in Sources */,
 				46A6D6B02A2CC80D00572121 /* FactsData.swift in Sources */,
 				46F8DEC92A2CA724005183CE /* MainView.swift in Sources */,
 				46A6D6B52A2CCE6700572121 /* ReceipesData.swift in Sources */,

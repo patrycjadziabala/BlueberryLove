@@ -24,31 +24,8 @@ struct ReceipeCardView: View {
                     .italic()
             } //vstack
             .padding([.leading, .trailing])
-            HStack {
-                ForEach(1...receipe.rating, id: \.self) { _ in
-                    Image(systemName: "star.fill")
-                        .foregroundColor(.yellow)
-                        .shadow(radius: 12)
-                }
-            }//hstack
-            HStack {
-                HStack {
-                    Image(systemName: "person")
-                    Text("Serves: \(receipe.serves)")
-                } //hstack
-                .opacity(0.6)
-                HStack {
-                    Image(systemName: "clock")
-                    Text("Prep: \(receipe.preparation)")
-                } //hstack
-                .opacity(0.6)
-                HStack {
-                    Image(systemName: "flame")
-                    Text("Cooking: \(receipe.cooking)")
-                } //hstack
-                .opacity(0.6)
-            } // hstack
-            .padding()
+            RatingView(receipe: receipe)
+           ReceipeInfoView(receipe: receipe)
         } //vstack
         .background(Color.white)
         .cornerRadius(20)
@@ -57,7 +34,7 @@ struct ReceipeCardView: View {
             showDetails = true
         }
         .sheet(isPresented: $showDetails) {
-            
+            ReceipeDetailsView(receipe: receipe)
         }
     }
 }
