@@ -9,60 +9,49 @@ import SwiftUI
 
 struct EntryView: View {
     @State private var pulsateAnimation: Bool = true
+    @State private var showEntry: Bool = true
     var body: some View {
-        ZStack {
-            Image("background")
-                .resizable()
-                .ignoresSafeArea()
-            
-            
-            VStack(spacing: 0) {
-                Image("blueberry")
+        if showEntry {
+            ZStack {
+                Image("background")
                     .resizable()
-                    .scaledToFit()
-                    .frame(height: 350)
-                    .shadow(radius: 12)
-                    .scaleEffect(pulsateAnimation ? 1 : 0.95)
-                    .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true), value: pulsateAnimation)
+                    .ignoresSafeArea()
                 
-                Text("Blueberries")
-                    .font(Font.custom("ArchitectsDaughter-Regular", size: 50))
-                    .shadow(radius: 6)
                 
-                Text(Constants.blueberriesDescription)
-                    .font(.system(size: 18))
-                    .multilineTextAlignment(.center)
-                    .padding()
-                    .background(
-                        Color("customBlue")
-                            .opacity(0.2)
-                            .cornerRadius(20))
-                    .padding()
-                
-                Button {
+                VStack(spacing: 0) {
+                    Image("blueberry")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(height: 350)
+                        .shadow(radius: 12)
+                        .scaleEffect(pulsateAnimation ? 1 : 0.95)
+                        .animation(Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true), value: pulsateAnimation)
                     
-                } label: {
-                    HStack {
-                        Text("Enter")
-                            .font(Font.custom("ArchitectsDaughter-Regular", size: 25))
-                        Image(systemName: "arrow.right.circle")
-                           
-                    } //hstack
-                    .padding([.top, .bottom], 2)
-                    .padding([.leading, .trailing], 15)
-                    .background(
-                        Capsule()
-                            .strokeBorder(lineWidth: 2)
-                            .shadow(radius: 6)
-                    )
-                } // button
-                .foregroundColor(Color("customBlue"))
-                Spacer()
-            } // vstack
-            .onAppear {
-                pulsateAnimation.toggle()
-            }
-        } // zstack
+                    Text("Blueberries")
+                        .font(Font.custom("ArchitectsDaughter-Regular", size: 50))
+                        .shadow(radius: 6)
+                    
+                    Text(Constants.blueberriesDescription)
+                        .font(.system(size: 18))
+                        .multilineTextAlignment(.center)
+                        .padding()
+                        .background(
+                            Color("customBlue")
+                                .opacity(0.2)
+                                .cornerRadius(20))
+                        .padding()
+                    
+                    EnterButtonView(showEntry: $showEntry)
+                    
+                    Spacer()
+                } // vstack
+                .onAppear {
+                    pulsateAnimation.toggle()
+                }
+            } // zstack
+        } else {
+            MainView()
+        }
     }
 }
 
