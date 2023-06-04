@@ -8,11 +8,15 @@
 import SwiftUI
 
 struct AppInfoView: View {
+    @State private var isAnimating: Bool = false
     var body: some View {
         ZStack {
             Image(Constants.backgroundImage)
                 .resizable()
                 .edgesIgnoringSafeArea(.top)
+            if isAnimating {
+                AnimationView()
+            }
             VStack  {
                 TitleView(title: "App Info", color: .black)
     
@@ -34,6 +38,12 @@ struct AppInfoView: View {
                     }
                 }
                 .padding()
+                Button {
+                    isAnimating.toggle()
+                } label: {
+                    Text("Click me")
+                }
+
                 Spacer()
             }
         }

@@ -16,9 +16,27 @@ struct HeaderView: View {
     @State private var showHeadline: Bool = false
     var body: some View {
         ZStack {
-            Image(Constants.blueberries)
-                .resizable()
-                .scaledToFit()
+            GeometryReader { geometry in
+                            VStack {
+                                if geometry.frame(in: .global).minY <= 0 {
+                                    Image(Constants.blueberries)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: geometry.size.width, height: geometry.size.height)
+                                        .shadow(radius: 12)
+                                        .offset(y: geometry.frame(in: .global).minY/9)
+                                        .clipped()
+                                } else {
+                                    Image(Constants.blueberries)
+                                        .resizable()
+                                        .aspectRatio(contentMode: .fill)
+                                        .frame(width: geometry.size.width, height: geometry.size.height + geometry.frame(in: .global).minY)
+                                        .shadow(radius: 12)
+                                        .clipped()
+                                        .offset(y: -geometry.frame(in: .global).minY)
+                                }
+                            } // vstack
+                        } // geometry
             HStack {
                 ZStack {
                     Rectangle()
@@ -45,7 +63,7 @@ struct HeaderView: View {
                 showHeadline = false
             }
         } //zstack
-        
+        .frame(height: 400,alignment: .center)
     }
 }
 

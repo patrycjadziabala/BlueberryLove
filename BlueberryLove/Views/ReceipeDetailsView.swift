@@ -8,12 +8,14 @@
 import SwiftUI
 
 struct ReceipeDetailsView: View {
+    @StateObject var viewModel = RecipeCardViewModel()
     var receipe: Receipe
+    
     var body: some View {
         
         ScrollView {
             VStack {
-                Image(receipe.image)
+                Image(receipe.title)
                     .resizable()
                     .scaledToFit()
                     .shadow(radius: 12)
