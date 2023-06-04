@@ -50,7 +50,7 @@ struct EntryView: View {
                 }
             } // zstack
         } else {
-            MainView()
+            BlueberryTabView()
         }
     }
 }

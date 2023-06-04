@@ -12,7 +12,6 @@ struct MainView: View {
         ZStack {
             Image(Constants.backgroundImage)
                 .resizable()
-                .scaledToFit()
                 .edgesIgnoringSafeArea(.top)
             ScrollView {
                 VStack {
