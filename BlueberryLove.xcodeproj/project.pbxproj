@@ -11,7 +11,9 @@
 		46F8DEB12A2C9579005183CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8DEB02A2C9579005183CE /* ContentView.swift */; };
 		46F8DEB32A2C957A005183CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEB22A2C957A005183CE /* Assets.xcassets */; };
 		46F8DEB62A2C957A005183CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEB52A2C957A005183CE /* Preview Assets.xcassets */; };
-		46F8DEBD2A2C973D005183CE /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEBC2A2C973D005183CE /* IndieFlower-Regular.ttf */; };
+		46F8DEC22A2C992D005183CE /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8DEC12A2C992D005183CE /* EntryView.swift */; };
+		46F8DEC42A2C9C61005183CE /* ArchitectsDaughter-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEC32A2C9C61005183CE /* ArchitectsDaughter-Regular.ttf */; };
+		46F8DEC72A2C9D5C005183CE /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8DEC62A2C9D5C005183CE /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +22,10 @@
 		46F8DEB02A2C9579005183CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46F8DEB22A2C957A005183CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46F8DEB52A2C957A005183CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		46F8DEBC2A2C973D005183CE /* IndieFlower-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IndieFlower-Regular.ttf"; path = "BlueberryLove/Fonts/IndieFlower-Regular.ttf"; sourceTree = SOURCE_ROOT; };
 		46F8DEBF2A2C9767005183CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		46F8DEC12A2C992D005183CE /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		46F8DEC32A2C9C61005183CE /* ArchitectsDaughter-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "ArchitectsDaughter-Regular.ttf"; path = "Architects_Daughter/ArchitectsDaughter-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		46F8DEC62A2C9D5C005183CE /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,10 +58,11 @@
 		46F8DEAD2A2C9579005183CE /* BlueberryLove */ = {
 			isa = PBXGroup;
 			children = (
+				46F8DEC52A2C9D47005183CE /* Utilities */,
+				46F8DEAE2A2C9579005183CE /* BlueberryLoveApp.swift */,
+				46F8DEC02A2C9903005183CE /* Views */,
 				46F8DEBF2A2C9767005183CE /* Info.plist */,
 				46F8DEBE2A2C9742005183CE /* Fonts */,
-				46F8DEAE2A2C9579005183CE /* BlueberryLoveApp.swift */,
-				46F8DEB02A2C9579005183CE /* ContentView.swift */,
 				46F8DEB22A2C957A005183CE /* Assets.xcassets */,
 				46F8DEB42A2C957A005183CE /* Preview Content */,
 			);
@@ -75,9 +80,26 @@
 		46F8DEBE2A2C9742005183CE /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				46F8DEBC2A2C973D005183CE /* IndieFlower-Regular.ttf */,
+				46F8DEC32A2C9C61005183CE /* ArchitectsDaughter-Regular.ttf */,
 			);
 			path = Fonts;
+			sourceTree = "<group>";
+		};
+		46F8DEC02A2C9903005183CE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				46F8DEB02A2C9579005183CE /* ContentView.swift */,
+				46F8DEC12A2C992D005183CE /* EntryView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		46F8DEC52A2C9D47005183CE /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				46F8DEC62A2C9D5C005183CE /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,9 +160,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				46F8DEBD2A2C973D005183CE /* IndieFlower-Regular.ttf in Resources */,
 				46F8DEB62A2C957A005183CE /* Preview Assets.xcassets in Resources */,
 				46F8DEB32A2C957A005183CE /* Assets.xcassets in Resources */,
+				46F8DEC42A2C9C61005183CE /* ArchitectsDaughter-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,6 +175,8 @@
 			files = (
 				46F8DEB12A2C9579005183CE /* ContentView.swift in Sources */,
 				46F8DEAF2A2C9579005183CE /* BlueberryLoveApp.swift in Sources */,
+				46F8DEC22A2C992D005183CE /* EntryView.swift in Sources */,
+				46F8DEC72A2C9D5C005183CE /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
