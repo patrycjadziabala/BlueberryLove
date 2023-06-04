@@ -9,7 +9,30 @@ import SwiftUI
 
 struct FactsTabView: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(spacing: 0) {
+            TitleView(title: "Facts", color: .black)
+            TabView {
+                ForEach(factsData, id: \.self) { fact in
+                    Group {
+                        Text("Blueberries ")
+                            .font(.custom(Constants.customFont, size: 30))
+                            .foregroundColor(.white)
+                        +
+                        Text(fact)
+                            .font(.system(size: 20))
+                    } //group
+                    .padding()
+                    .background(
+                        Color(Constants.customBlueColor)
+                            .opacity(0.3)
+                            .cornerRadius(20)
+                            .frame(height: 150)
+                    )
+                }
+            } // tabView
+            .tabViewStyle(.page)
+            .frame(height: 210)
+        }
     }
 }
 

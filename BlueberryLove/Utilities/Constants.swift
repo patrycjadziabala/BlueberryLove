@@ -13,4 +13,5 @@ struct Constants {
     static let backgroundImage = "background"
     static let blueberries = "blueberries"
     static let customFont = "ArchitectsDaughter-Regular"
+    static let customBlueColor = "customBlue"
 }

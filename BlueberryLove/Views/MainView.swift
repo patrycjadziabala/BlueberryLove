@@ -12,17 +12,23 @@ struct MainView: View {
         ZStack {
             Image(Constants.backgroundImage)
                 .resizable()
-                .edgesIgnoringSafeArea(.top)
-            VStack {
-                Image(Constants.blueberries)
-                    .resizable()
-                    .scaledToFit()
-//                    .edgesIgnoringSafeArea(.top)
-                NutritionView()
-                Spacer()
-            } //vstack
-        } //zstack
-        
+                .scaledToFit()
+                .ignoresSafeArea()
+            ScrollView {
+                VStack {
+                    HeaderView()
+                    NutritionView()
+                    FactsTabView()
+                    TitleView(title: "Receipes", color: .black)
+                    ForEach(receipeData, id: \.id) { receipe in
+                        ReceipeCardView(receipe: receipe)
+                            .padding()
+                    }
+                    Spacer()
+                } //vstack
+            } //scrollView
+            .edgesIgnoringSafeArea(.top)
+        }//zstack
     }
 }
 
