@@ -11,6 +11,7 @@
 		46F8DEB12A2C9579005183CE /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 46F8DEB02A2C9579005183CE /* ContentView.swift */; };
 		46F8DEB32A2C957A005183CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEB22A2C957A005183CE /* Assets.xcassets */; };
 		46F8DEB62A2C957A005183CE /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEB52A2C957A005183CE /* Preview Assets.xcassets */; };
+		46F8DEBD2A2C973D005183CE /* IndieFlower-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 46F8DEBC2A2C973D005183CE /* IndieFlower-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,8 @@
 		46F8DEB02A2C9579005183CE /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		46F8DEB22A2C957A005183CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		46F8DEB52A2C957A005183CE /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		46F8DEBC2A2C973D005183CE /* IndieFlower-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "IndieFlower-Regular.ttf"; path = "BlueberryLove/Fonts/IndieFlower-Regular.ttf"; sourceTree = SOURCE_ROOT; };
+		46F8DEBF2A2C9767005183CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +54,8 @@
 		46F8DEAD2A2C9579005183CE /* BlueberryLove */ = {
 			isa = PBXGroup;
 			children = (
+				46F8DEBF2A2C9767005183CE /* Info.plist */,
+				46F8DEBE2A2C9742005183CE /* Fonts */,
 				46F8DEAE2A2C9579005183CE /* BlueberryLoveApp.swift */,
 				46F8DEB02A2C9579005183CE /* ContentView.swift */,
 				46F8DEB22A2C957A005183CE /* Assets.xcassets */,
@@ -65,6 +70,14 @@
 				46F8DEB52A2C957A005183CE /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		46F8DEBE2A2C9742005183CE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				46F8DEBC2A2C973D005183CE /* IndieFlower-Regular.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				46F8DEBD2A2C973D005183CE /* IndieFlower-Regular.ttf in Resources */,
 				46F8DEB62A2C957A005183CE /* Preview Assets.xcassets in Resources */,
 				46F8DEB32A2C957A005183CE /* Assets.xcassets in Resources */,
 			);
@@ -270,6 +284,7 @@
 				DEVELOPMENT_TEAM = 22NX7WBF6A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueberryLove/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +314,7 @@
 				DEVELOPMENT_TEAM = 22NX7WBF6A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = BlueberryLove/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
