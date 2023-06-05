@@ -15,7 +15,7 @@ struct ReceipeDetailsView: View {
         
         ScrollView {
             VStack {
-                Image(receipe.title)
+                Image(receipe.image)
                     .resizable()
                     .scaledToFit()
                     .shadow(radius: 12)
