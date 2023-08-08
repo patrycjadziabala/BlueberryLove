@@ -16,7 +16,7 @@ struct ReceipeCardView: View {
                 .resizable()
                 .scaledToFit()
                 .shadow(radius: 6)
-            VStack (alignment: .leading) {
+            VStack (alignment: .center) {
                 Text(receipe.title)
                     .font(.custom(Constants.customFont, size: 30))
                 Text(receipe.headline)

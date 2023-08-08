@@ -22,7 +22,6 @@ struct AppInfoView: View {
     
                 VStack (spacing: 20) {
                     ForEach(appInfo, id: \.id) { info in
-                        
                             HStack {
                                 Text(info.title)
                                 Spacer()
@@ -43,7 +42,6 @@ struct AppInfoView: View {
                 } label: {
                     Text("Click me")
                 }
-
                 Spacer()
             }
         }

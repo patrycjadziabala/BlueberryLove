@@ -10,9 +10,7 @@ import SwiftUI
 struct ReceipeDetailsView: View {
     @StateObject var viewModel = RecipeCardViewModel()
     var receipe: Receipe
-    
     var body: some View {
-        
         ScrollView {
             VStack {
                 Image(receipe.image)

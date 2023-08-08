@@ -17,7 +17,6 @@ struct EntryView: View {
                     .resizable()
                     .ignoresSafeArea()
                 
-                
                 VStack(spacing: 0) {
                     Image("blueberry")
                         .resizable()

@@ -9,7 +9,6 @@ import SwiftUI
 
 struct EnterButtonView: View {
     @Binding var showEntry: Bool
-    
     var body: some View {
         Button {
             showEntry.toggle()
@@ -18,7 +17,6 @@ struct EnterButtonView: View {
                 Text("Enter")
                     .font(Font.custom("ArchitectsDaughter-Regular", size: 25))
                 Image(systemName: "arrow.right.circle")
-                   
             } //hstack
             .padding([.top, .bottom], 2)
             .padding([.leading, .trailing], 15)

@@ -20,25 +20,25 @@ struct AnimationView: View {
     
     var body: some View {
         ZStack {
-                    ForEach(0...9, id: \.self) { item in
-                            GeometryReader { geometry in
-                            Image("blueberryIcon")
-                                .renderingMode(.template)
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: 150)
-                                .position(x: randomPosition(max: geometry.size.width), y: randomPosition(max: geometry.size.height))
-                                .foregroundColor(Color(Constants.customBlueColor)
-                                    .opacity(0.6))
-                                .rotationEffect(.degrees(randomRotation()))
-                                .animation(Animation.easeInOut(duration: 75).repeatForever(autoreverses: false).speed(4), value: isAnimated)
-                                .onAppear {
-                                    isAnimated = true
-                                }
-                            } .edgesIgnoringSafeArea(.top)
-                        
-                    }
+            ForEach(0...9, id: \.self) { item in
+                GeometryReader { geometry in
+                    Image("blueberryIcon")
+                        .renderingMode(.template)
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 150)
+                        .position(x: randomPosition(max: geometry.size.width), y: randomPosition(max: geometry.size.height))
+                        .foregroundColor(Color(Constants.customBlueColor)
+                            .opacity(0.6))
+                        .rotationEffect(.degrees(randomRotation()))
+                        .animation(Animation.easeInOut(duration: 75).repeatForever(autoreverses: false).speed(4), value: isAnimated)
+                        .onAppear {
+                            isAnimated = true
+                        }
                 }
+                .edgesIgnoringSafeArea(.top)
+            }
+        }
     }
 }
 
